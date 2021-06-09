@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <h1>Vamos juan ya estamos avanzando</h1>
+        <script src="/socket.io/socket.io.js"></script>
+        <script>
+            var socket = io.connect('http://localhost:8080', {
+                forceNew: true,
+            });
+
+            socket.on('mensaje', function (data) {
+                console.log(data);
+            });
+        </script>
+    </body>
+</html>
